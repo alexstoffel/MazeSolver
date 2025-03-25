@@ -1,3 +1,5 @@
+// Alex Stoffel
+// This is the maze code, and it my main document
 /**
  * Creates a Maze made up of MazeCells
  * @author Ms. Namasivayam
@@ -146,7 +148,13 @@ public class Maze {
      * @return boolean true/false
      */
     public boolean isValidCell(int row, int col) {
-        // TODO: Complete this function
+        // TODO: Complete this function DONE
+        // Store the Maze Cell we are checking
+        MazeCell cell = this.getCell(row, col);
+        // Check if it is a wall or if it is already checked
+        if (cell.isExplored() && cell.isWall()){
+            return false;
+        }
         return true;
     }
 }

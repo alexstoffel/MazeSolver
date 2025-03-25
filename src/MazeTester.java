@@ -1,3 +1,5 @@
+// Alex Stoffel
+// This is the maze tester class, and it tests our maze solver
 /**
  * A class to test our MazeSolver
  * @author: Nandhini Namasivayam

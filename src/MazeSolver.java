@@ -1,3 +1,6 @@
+// Alex Stoffel
+// This is the Maze solver class, and basically solves any maze
+
 /**
  * Solves the given maze using DFS or BFS
  * @author Ms. Namasivayam
@@ -5,6 +8,7 @@
  */
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class MazeSolver {
     private Maze maze;
@@ -29,6 +33,9 @@ public class MazeSolver {
     public ArrayList<MazeCell> getSolution() {
         // TODO: Get the solution from the maze
         // Should be from start to end cells
+        // Store a Stack so we can reverse the solution
+        Stack<MazeCell> solution = new Stack<MazeCell>();
+
         return null;
     }
 

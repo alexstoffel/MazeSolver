@@ -1,3 +1,5 @@
+// Alex Stoffel
+// This is the class for every one of the cells in the maze
 /**
  * A class that represents a single cell of the maze.
  * @author Ms. Namasivayam
