@@ -36,7 +36,22 @@ public class MazeSolver {
         // Store a Stack so we can reverse the solution
         Stack<MazeCell> solution = new Stack<MazeCell>();
 
-        return null;
+        // Start at the end cell
+        MazeCell cell = maze.getEndCell();
+        while (!cell.equals(maze.getStartCell())){
+            // Add the cell to the solution
+            solution.add(cell);
+            cell = cell.getParent();
+        }
+        // Add the start cell, since the while loop wont include it
+        solution.add(cell);
+        // For loop to add the solution stack to an arrayList
+        int solutionSize = solution.size();
+        ArrayList<MazeCell> arr = new ArrayList<MazeCell>();
+        while (!solution.empty()){
+            arr.add(solution.pop());
+        }
+        return arr;
     }
 
     /**
