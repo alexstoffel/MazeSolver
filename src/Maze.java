@@ -157,4 +157,12 @@ public class Maze {
         }
         return true;
     }
+
+    // Getters for num Columns
+    public int getNumCols(){
+        return this.numCols;
+    }
+    public int getNumRows(){
+        return this.numRows;
+    }
 }
