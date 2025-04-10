@@ -148,21 +148,16 @@ public class Maze {
      * @return boolean true/false
      */
     public boolean isValidCell(int row, int col) {
-        // TODO: Complete this function DONE
-        // Store the Maze Cell we are checking
-        MazeCell cell = this.getCell(row, col);
-        // Check if it is a wall or if it is already checked
-        if (cell.isExplored() && cell.isWall()){
-            return false;
+        // Check if the cell is out of bounds
+        if ((-1 < row && row < this.numRows) && (-1 < col && col < this.numCols)) {
+            // Store the Maze Cell we are checking
+            MazeCell cell = this.getCell(row, col);
+            // Check if it is a wall or if it is already checked
+            if (!cell.isExplored() && !cell.isWall()) {
+                return true;
+            }
         }
-        return true;
-    }
-
-    // Getters for num Columns
-    public int getNumCols(){
-        return this.numCols;
-    }
-    public int getNumRows(){
-        return this.numRows;
+        return false;
     }
 }
+
